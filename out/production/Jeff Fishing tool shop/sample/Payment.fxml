@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PaymentController">
+   <children>
+      <Button layoutX="142.0" layoutY="295.0" mnemonicParsing="false" onAction="#paymentProcess" prefHeight="25.0" prefWidth="89.0" text="Pay">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TextField fx:id="textOne" layoutX="66.0" layoutY="135.0" prefHeight="25.0" prefWidth="241.0" promptText="Name On Card" />
+      <TextField fx:id="textTwo" layoutX="66.0" layoutY="188.0" prefHeight="25.0" prefWidth="241.0" promptText="Card Number" />
+      <TextField fx:id="textThree" layoutX="66.0" layoutY="229.0" prefHeight="25.0" prefWidth="109.0" promptText="Expiary" />
+      <TextField fx:id="textFour" layoutX="198.0" layoutY="229.0" prefHeight="25.0" prefWidth="109.0" promptText="Security Code" />
+      <Label alignment="CENTER" layoutX="62.0" layoutY="62.0" prefHeight="45.0" prefWidth="160.0" text="Payment Amount -" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+
+
+      <Label fx:id="amount" layoutX="237.0" layoutY="70.0" prefHeight="30.0" prefWidth="57.0" text="Label" />
+   </children>
+</Pane>

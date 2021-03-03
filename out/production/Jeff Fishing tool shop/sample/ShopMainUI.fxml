@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="651.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShopGuiController">
+   <children>
+      <ScrollPane layoutX="230.0" layoutY="76.0" prefHeight="512.0" prefWidth="436.0">
+         <content>
+            <VBox prefHeight="698.0" prefWidth="418.0">
+               <children>
+                  <Pane prefHeight="182.0" prefWidth="510.0">
+                     <children>
+                        <ImageView fx:id="imageOne" fitHeight="97.0" fitWidth="129.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <RadioButton fx:id="itemOne" layoutX="165.0" layoutY="59.0" mnemonicParsing="false" onAction="#select" text="RadioButton" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="182.0" prefWidth="510.0">
+                     <children>
+                        <ImageView fx:id="imageTwo" fitHeight="97.0" fitWidth="129.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <RadioButton fx:id="itemTwo" layoutX="165.0" layoutY="50.0" mnemonicParsing="false" onAction="#select" text="RadioButton" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="182.0" prefWidth="510.0">
+                     <children>
+                        <ImageView fx:id="imageThree" fitHeight="97.0" fitWidth="129.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <RadioButton fx:id="itemThree" layoutX="165.0" layoutY="50.0" mnemonicParsing="false" onAction="#select" text="RadioButton" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="182.0" prefWidth="510.0">
+                     <children>
+                        <ImageView fx:id="imageFour" fitHeight="97.0" fitWidth="129.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <RadioButton fx:id="itemFour" layoutX="165.0" layoutY="49.0" mnemonicParsing="false" onAction="#select" text="RadioButton" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="182.0" prefWidth="510.0">
+                     <children>
+                        <ImageView fx:id="imageFive" fitHeight="97.0" fitWidth="129.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <RadioButton fx:id="itemFive" layoutX="165.0" layoutY="49.0" mnemonicParsing="false" onAction="#select" text="RadioButton" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="182.0" prefWidth="510.0">
+                     <children>
+                        <ImageView fx:id="imageSix" fitHeight="97.0" fitWidth="129.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <RadioButton fx:id="itemSix" layoutX="165.0" layoutY="49.0" mnemonicParsing="false" onAction="#select" text="RadioButton" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button layoutX="836.0" layoutY="23.0" mnemonicParsing="false" onAction="#logoutProcess" prefHeight="25.0" prefWidth="112.0" text="Logout" />
+      <Button layoutX="617.0" layoutY="23.0" mnemonicParsing="false" onAction="#modifyingProcess" text="Change account details" />
+      <Label layoutX="27.0" layoutY="27.0" text="ID -" />
+      <Label fx:id="id" layoutX="52.0" layoutY="27.0" text="###" />
+      <Button layoutX="679.0" layoutY="557.0" mnemonicParsing="false" onAction="#paymentProcess" prefHeight="31.0" prefWidth="134.0" text="Make payment " />
+      <Label fx:id="name" layoutX="222.0" layoutY="27.0" text="###########" />
+      <Label layoutX="170.0" layoutY="27.0" text="Name -" />
+      <Label fx:id="itemName" alignment="CENTER" layoutX="26.0" layoutY="332.0" prefHeight="17.0" prefWidth="193.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ImageView fx:id="mainImage" fitHeight="180.0" fitWidth="200.0" layoutX="22.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="77.0" layoutY="536.0" mnemonicParsing="false" onAction="#addToCartProcess" text="ADD TO CART" textFill="#110f0f" />
+      <ComboBox fx:id="sizeOptions" layoutX="66.0" layoutY="425.0" prefHeight="25.0" prefWidth="112.0" promptText="Select Size" />
+      <TextField fx:id="quantity" alignment="CENTER" layoutX="66.0" layoutY="465.0" prefHeight="25.0" prefWidth="112.0" promptText="Quantity" />
+      <Label fx:id="total" alignment="CENTER" layoutX="816.0" layoutY="490.0" prefHeight="38.0" prefWidth="84.0" text="00.00" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TableView fx:id="tableView" layoutX="679.0" layoutY="101.0" prefHeight="332.0" prefWidth="268.0">
+        <columns>
+          <TableColumn fx:id="c_name" prefWidth="104.0" text="Item Name" />
+          <TableColumn fx:id="c_quantity" prefWidth="44.0" text="Qty" />
+            <TableColumn fx:id="c_size" prefWidth="47.199951171875" text="Size" />
+            <TableColumn fx:id="c_cost" prefWidth="75.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Button layoutX="813.0" layoutY="557.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="31.0" prefWidth="134.0" text="Clear Cart" />
+      <Label layoutX="757.0" layoutY="76.0" prefHeight="27.0" prefWidth="112.0" text="Shoping Cart">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="total1" alignment="CENTER" layoutX="732.0" layoutY="490.0" prefHeight="38.0" prefWidth="84.0" text="Total -" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="448.0" layoutY="23.0" mnemonicParsing="false" onAction="#openEmailWindow" text="Email Inquiry" />
+   </children>
+</Pane>
